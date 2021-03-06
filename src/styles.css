@@ -5,6 +5,12 @@ body {
   h6 {
     font-weight: bolder;
   }
+
+  footer {
+    font-size: 12px;
+    margin-top: -12px;
+    margin-left: 125px;
+  }
   
   #search-city-input,
   #magnifying-glass-emoji {
