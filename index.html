@@ -18,31 +18,54 @@
     />
   </head>
   <body>
+    <div class="weather-app-full">
     <div class="container">
+      <!--search city form-->
       <form id="city-search-form">
         <input type="search" placeholder="Search location here" id="search-city-input" />
         <input type="submit" value="🔎" id="magnifying-glass-emoji" />
         <input type="submit" value="📍" id="current-location-btn" />
       </form>
       <span class="units"> <a href="#" id="celsius-temp">°C</a> | <a href="#" id="fahrenheit-temp">°F</a></span>
-      <br />
+      <hr />
+      <!--current weather forecast-->
       <div class="current-forecast">
         <div class="row">
-          <div class="col">
+          <div class="col local-forecast">
+            <ul>
+              <li>
             <h1 class="temperature" id="current-temperature">15°</h1>
-            
+          </li>
+          <li>
             <h2 class="date-time" id="current-date"></h2>
+          </li>
+          <li>
             <h2 class="feels-like" id="feels-like">Feels like: 2°</h2>
-            <h3 class="high-low">H: 23° L:9°</h3>
+          </li>
+          <li>
+            <h3 class="temp-high" id="max-temp">H: 23°</h3>
+                  |
+                  <h3 class="temp-low" id="min-temp">L: 9°</h3>
+          </li>
+          </ul>
           </div>
           <div class="col city-search">
+            <ul>
+              <li>
             <h1 class="local-temp" id="search-city-result">Kansas City</h1>
+          </li>
+          <li>
             <h2 class="conditions">Cloudy</h2>
+          </li>
+          <li>
             <h3 class="icon">☁️</h3>
+          </li>
+          </ul>
           </div>
         </div>
       </div>
-      <br />
+      <hr />
+      <!--hourly forecast-->
       <div class="hourly-forecast">
         <button class="hourly-button" id="hourly-button">Hourly</button>
         <button class="daily-button" id="daily-button">Daily</button>
@@ -162,6 +185,7 @@
       <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project">Jordyn Rothberg</a></footer>
     </section>
     </div>
+  </div>
     <script src="src/script.js"></script>
   </body>
 </html>
