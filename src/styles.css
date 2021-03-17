@@ -1,53 +1,62 @@
-body {
-    font-family: "Sintony", sans-serif;
-  }
-
-  ul li {
+ul li {
     list-style: none;
   }
   
-  h6 {
+h6 {
     font-weight: bolder;
   }
 
-  footer {
+footer {
     font-size: 12px;
     margin-top: -12px;
     margin-left: 125px;
     font-family: "Sintony", sans-serif;
   }
-  
-  #search-city-input,
-  #magnifying-glass-emoji {
-    border-radius: 10%;
-    font-size: 15px;
-  }
-  
+
   .current-forecast,
   .five-day-forecast {
-    border: 2px solid #5a6275;
-    background-color: #dee0e3;
-    border-radius: 10%;
-    max-width: 500px;
+      border: 2px solid #5a6275;
+      background-color: #dee0e3;
+      border-radius: 10%;
+      max-width: 500px;
+      font-family: "Sintony", sans-serif;
+    }
+
+  .weather-app-full {
     font-family: "Sintony", sans-serif;
+    margin: 10px auto;
+    max-width: 550px;
+    padding: 20px;
   }
   
-  .temperature {
-  padding: 15px 10px 0px 0px;
-  font-size: 50px;
+  .container {
+    border: 2px solid #5a6275;
+    max-width: 550px;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  
+#search-city-input,
+#magnifying-glass-emoji {
+    font-size: 15px;
   }
 
   .units,
-.unit-switch {
+  .unit-switch {
   display: inline;
   position: relative;
   left: 10px;
   font-size: 15px;
 }
 
-.unit-switch {
+  .unit-switch {
   margin-top: 15px;
-}
+  }
+
+.local-temperature {
+  padding: 15px 10px 0px 0px;
+  font-size: 50px;
+  }
 
   .feels-like {
     padding-bottom: 10px;
@@ -64,49 +73,25 @@ body {
   display: inline;
   font-size: 15px;
   padding-top: 10px;
-}
+  }
 
-  .local-temp {
+  .city-name {
     padding-top: 15px;
     font-size: 30px;
   }
   
-  .conditions {
+  .weather-conditions {
     padding-top: 15px;
     padding-left: 40px;
     font-size: 25px;
   }
   
-  .icon {
+  .current-forecast-icon {
     padding-top: 10px;
     padding-left: 50px;
     font-size: 55px;
   }
   
-  .weather-app-full {
-    font-family: "Sintony", sans-serif;
-    margin: 10px auto;
-    max-width: 550px;
-    padding: 20px;
-  }
-  
-  .container {
-    border: 2px solid #5a6275;
-    max-width: 550px;
-    margin: 100px auto;
-    padding: 20px;
-  }
-  
-  .units {
-    position: relative;
-    left: 10px;
-    font-size: 15px;
-  }
-
-  .hourly-button{
-     margin-left: 180px;
-  }
-
   .hourly-forecast-btn,
   .daily-forecast-btn {
     border: 1px solid #5a6275;
@@ -128,7 +113,6 @@ body {
   
   }
   
-  
   #day-one,
   #day-two,
   #day-three,
@@ -141,12 +125,12 @@ body {
     border: 2px solid #d1f0ee;
     background-color: #f6fdfc;
     border-radius: 10%;
-    max-width: 400px;
-    margin-left: 45px;
+    max-width: 450px;
+    margin-left: 10px;
     margin-bottom: 20px;
   }
   
-  .wind-chance,
+  .wind-speed,
   .humidity-visibility,
   .precipitation-uvindex,
   .sunrise-sunset {
@@ -156,7 +140,7 @@ body {
   }
   
   .wind,
-  .chance-of-snow,
+  .pressure,
   .humidity,
   .visibility,
   .precipitation,

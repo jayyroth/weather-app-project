@@ -20,7 +20,7 @@
   <body>
     <div class="container">
       <div class="weather-app-full">
-      <!--search city form-->
+      <!--SEARCH CITY FORM-->
       <form id="city-search-form">
         <input type="search" placeholder="Search location here" id="search-city-input" />
         <input type="submit" value="🔎" id="magnifying-glass-emoji" />
@@ -41,13 +41,13 @@
       </form>
       
       &nbsp;
-      <!--current weather forecast-->
+      <!--CURRENT WEATHER FORECAST-->
       <div class="current-forecast">
         <div class="row">
           <div class="col local-forecast">
             <ul>
               <li>
-            <h1 class="temperature" id="current-temperature">15°</h1>
+            <h1 class="local-temperature" id="current-temperature">15°</h1>
           </li>
           <li>
             <h2 class="date-time" id="current-date"></h2>
@@ -58,20 +58,20 @@
           <li>
             <h3 class="temp-high" id="max-temp">H: 23°</h3>
                   |
-                  <h3 class="temp-low" id="min-temp">L: 9°</h3>
+            <h3 class="temp-low" id="min-temp">L: 9°</h3>
           </li>
           </ul>
           </div>
           <div class="col city-search">
             <ul>
               <li>
-            <h1 class="local-temp" id="search-city-result">Kansas City</h1>
+            <h1 class="city-name weather-location-search" id="search-city-result">Kansas City</h1>
           </li>
           <li>
-            <h2 class="conditions">Cloudy</h2>
+            <h2 class="weather-conditions" id="weather-description">Cloudy</h2>
           </li>
           <li>
-            <h3 class="icon">☁️</h3>
+            <h3 class="current-forecast-icon" id="weather-icon">☁️</h3>
           </li>
           </ul>
           </div>
@@ -80,7 +80,7 @@
       &nbsp;
       <section class="weatherForecastInformation">
       <div class="five-day-forecast">
-        <div class="row hourly-daily-btn">
+        <div class="row forecastDailyHourlyToggle">
             <button class="daily-forecast-btn" id="daily-button">Daily</button>
             <button class="hourly-forecast-btn" id="hourly-button">Hourly</button>
             <br />
@@ -130,50 +130,82 @@
       <br />
       <section class="weatherStatistics">
       <div class="statistics">
-        <div class="row wind-chance">
+        <div class="row wind-speed pressure">
           <div class="col wind">
+            <ul>
+              <li>
             Wind
             <h6>NNE 10 mph</h6>
+             </li>
           </div>
-          <div class="col chance-of-snow">
-            Chance of Snow
-            <h6>20%</h6>
+           </ul>
+          <div class="col pressure">
+            <ul>
+            <li>
+                Pressure
+              <h6>20%</h6>
+            </li>
+            </ul>
           </div>
         </div>
         <div class="row humidity-visibility">
           <div class="col humidity">
-            Humidity
-            <h6>78%</h6>
+              <ul>
+            <li>
+                Humidity
+                <h6>78%</h6>
+            </li>
+        </ul>
           </div>
           <div class="col visibility">
-            Visibility
-            <h6>10m</h6>
+              <ul>
+            <li>
+                Visibility
+                <h6>10m</h6>
+            </li>
+        </ul>
           </div>
         </div>
         <div class="row precipitation-uvindex">
           <div class="col precipitation">
-            Precipitation
-            <h6>0.1in</h6>
+              <ul>
+            <li>
+                Precipitation
+                <h6>0.1in</h6>
+            </li>
+        </ul>
           </div>
           <div class="col uv-index">
-            UV Index
-            <h6>0</h6>
+              <ul>
+            <li>
+                UV Index
+                <h6>0</h6>
+            </li>
+             </ul>
           </div>
         </div>
         <div class="row sunrise-sunset">
           <div class="col sunrise">
-            Sunrise
+              <ul>
+            <li>
+                Sunrise
             <h6>7:17AM</h6>
+            </li>
+        </ul>
           </div>
           <div class="col sunset">
-            Sunset
+              <ul>
+            <li>
+                Sunset
             <h6>5:46PM</h6>
+            </li>
+        </ul>
           </div>
         </div>
       </div>
-      <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project" target="_blank">Jordyn Rothberg</a></footer>
-    </section>
+      </section>
     </div>
+    <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project" target="_blank">Jordyn Rothberg</a></footer>
   </div>
     <script src="src/script.js"></script>
   </body>
