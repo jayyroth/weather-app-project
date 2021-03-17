@@ -37,12 +37,17 @@ body {
   font-size: 50px;
   }
 
-  #celsius-temp,
-  #fahrenheit-temp {
-    font-size: 12px;
-    text-decoration: none;
-    color: black;
-  }
+  .units,
+.unit-switch {
+  display: inline;
+  position: relative;
+  left: 10px;
+  font-size: 15px;
+}
+
+.unit-switch {
+  margin-top: 15px;
+}
 
   .feels-like {
     padding-bottom: 10px;
