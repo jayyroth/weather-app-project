@@ -91,36 +91,15 @@ footer {
     padding-left: 50px;
     font-size: 55px;
   }
-  
-  .hourly-forecast-btn,
-  .daily-forecast-btn {
-    border: 1px solid #5a6275;
-    border-radius: 5px;
-    margin-top: 10px; 
-    margin-bottom: 10px;
-    padding: 0, 2px;
-    font-size: 14px;
-  }
-  
-  .hourly-forecast-btn:hover,
-  .daily-forecast-btn:hover {
-    background-color: #5a6275;
-  }
 
   .five-day-forecast {
-    font-size: 14px;
-    border: 1px solid #5a6275;
-  
+    padding: 20px;
   }
-  
-  #day-one,
-  #day-two,
-  #day-three,
-  #day-four,
-  #day-five {
-    text-align: center;
+
+  .daily-forecast {
+    padding-left: 145px;
   }
-  
+
   .statistics {
     border: 2px solid #d1f0ee;
     background-color: #f6fdfc;
@@ -136,7 +115,7 @@ footer {
   .sunrise-sunset {
     padding-top: 10px;
     padding-bottom: 8px;
-    padding-left: 60px;
+    padding-left: 55px;
   }
   
   .wind,

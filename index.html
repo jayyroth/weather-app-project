@@ -80,12 +80,22 @@
       &nbsp;
       <section class="weatherForecastInformation">
       <div class="five-day-forecast">
-        <div class="row forecastDailyHourlyToggle">
-            <button class="daily-forecast-btn" id="daily-button">Daily</button>
-            <button class="hourly-forecast-btn" id="hourly-button">Hourly</button>
-            <br />
-        </div>
-        <br />
+        
+<div class="forecast-toggle">
+          <label class="daily-forecast" for="flexSwitchDefaultForecast">Daily</label>
+            <div class="unit-switch form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexSwitchDefaultForecast"
+              />
+              <label class="form-check-label" for="flexSwitchDefaultForecast"
+                >Hourly</label
+              >
+            </div>
+
+      <br />
+      &nbsp;
         <div class="row days-of-the-week">
           <div class="col" id="day-one">Sat</div>
           <div class="col" id="day-two">Sun</div>
