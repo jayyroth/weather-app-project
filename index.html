@@ -18,15 +18,26 @@
     />
   </head>
   <body>
-    <div class="weather-app-full">
     <div class="container">
+      <div class="weather-app-full">
       <!--search city form-->
       <form id="city-search-form">
         <input type="search" placeholder="Search location here" id="search-city-input" />
         <input type="submit" value="🔎" id="magnifying-glass-emoji" />
         <input type="submit" value="📍" id="current-location-btn" />
 
-        <span class="units"> <a href="#" id="celsius-temp">°C</a> | <a href="#" id="fahrenheit-temp">°F</a></span>
+        <span class="units">°C</span>
+
+            <div class="unit-switch form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexSwitchCheckDefault"
+              />
+              <label class="form-check-label" for="flexSwitchCheckDefault"
+                >°F</label
+              >
+            </div>
       </form>
       
       &nbsp;
@@ -67,81 +78,57 @@
         </div>
       </div>
       &nbsp;
-      <!--hourly forecast-->
-      <div class="hourly-forecast">
-        <button class="hourly-button" id="hourly-button">Hourly</button>
-        <button class="daily-button" id="daily-button">Daily</button>
-        <br />
-        <div class="row hour">
-          <div class="col-1" id="now">Now</div>
-          <div class="col-1" id="hour-two">9P</div>
-          <div class="col-1" id="hour-three">10P</div>
-          <div class="col-1" id="hour-four">11P</div>
-          <div class="col-1" id="hour-five">12A</div>
+      <section class="weatherForecastInformation">
+      <div class="five-day-forecast">
+        <div class="row hourly-daily-btn">
+            <button class="daily-forecast-btn" id="daily-button">Daily</button>
+            <button class="hourly-forecast-btn" id="hourly-button">Hourly</button>
+            <br />
         </div>
         <br />
-        <div class="row hourly-temp">
-          <div class="col-1" id="now">14°</div>
-          <div class="col-1" id="hour-two">14°</div>
-          <div class="col-1" id="hour-three">13°</div>
-          <div class="col-1" id="hour-four">12°</div>
-          <div class="col-1" id="hour-five">13°</div>
-        </div>
-        <div class="row hourly-icon">
-          <div class="col-1" id="now">☁️</div>
-          <div class="col-1" id="hour-two">☁️</div>
-          <div class="col-1" id="hour-three">☁️</div>
-          <div class="col-1" id="hour-four">☁️</div>
-          <div class="col-1" id="hour-five">☁️</div>
-        </div>
-      </div>
-      <br />
-      <div class="daily-forecast">
-        <div class="row hourly-daily">
-          <div class="col-2 hourly-df">Hourly</div>
-          <div class="col-2 daily-df">Daily</div>
-        </div>
-        <br />
-        <div class="row day">
-          <div class="col" id="day-one">Sat 06</div>
-          <div class="col" id="day-two">Sun 07</div>
-          <div class="col" id="day-three">Mon 08</div>
-          <div class="col" id="day-four">Tue 09</div>
-          <div class="col" id="day-five">Wed 10</div>
+        <div class="row days-of-the-week">
+          <div class="col" id="day-one">Sat</div>
+          <div class="col" id="day-two">Sun</div>
+          <div class="col" id="day-three">Mon</div>
+          <div class="col" id="day-four">Tue</div>
+          <div class="col" id="day-five">Wed</div>
         </div>
         <br />
         <div class="row daily-high">
-          <div class="col" id="day-one">24°</div>
-          <div class="col" id="day-two">15°</div>
-          <div class="col" id="day-three">18°</div>
-          <div class="col" id="day-four">19°</div>
-          <div class="col" id="day-five">20°</div>
+          <div class="col" id="day-one-high">24°</div>
+          <div class="col" id="day-two-high">15°</div>
+          <div class="col" id="day-three-high">18°</div>
+          <div class="col" id="day-four-high">19°</div>
+          <div class="col" id="day-five-high">20°</div>
         </div>
         <div class="row daily-low">
-          <div class="col" id="day-one">9°</div>
-          <div class="col" id="day-two">12°</div>
-          <div class="col" id="day-three">7°</div>
-          <div class="col" id="day-four">10°</div>
-          <div class="col" id="day-five">10°</div>
+          <div class="col" id="day-one-low">
+              <small>9°</small>
+            </div>
+          <div class="col" id="day-two-low">12°</div>
+          <div class="col" id="day-three-low">7°</div>
+          <div class="col" id="day-four-low">10°</div>
+          <div class="col" id="day-five-low">10°</div>
         </div>
         <br />
         <div class="row daily-icon">
-          <div class="col" id="day-one">☁️</div>
-          <div class="col" id="day-two">🌨</div>
-          <div class="col" id="day-three">🌨</div>
-          <div class="col" id="day-four">⛅️</div>
-          <div class="col" id="day-five">🌨</div>
+          <div class="col" id="day-one-icon">☁️</div>
+          <div class="col" id="day-two-icon">🌨</div>
+          <div class="col" id="day-three-icon">🌨</div>
+          <div class="col" id="day-four-icon">⛅️</div>
+          <div class="col" id="day-five-icon">🌨</div>
         </div>
         <div class="row daily-stats">
-          <div class="col" id="day-one">20%</div>
-          <div class="col" id="day-two">50%</div>
-          <div class="col" id="day-three">40%</div>
-          <div class="col" id="day-four">10%</div>
-          <div class="col" id="day-five">30%</div>
+          <div class="col" id="day-one-stats">20%</div>
+          <div class="col" id="day-two-stats">50%</div>
+          <div class="col" id="day-three-stats">40%</div>
+          <div class="col" id="day-four-stats">10%</div>
+          <div class="col" id="day-five-stats">30%</div>
         </div>
       </div>
+    </section>
       <br />
-      <section>
+      <section class="weatherStatistics">
       <div class="statistics">
         <div class="row wind-chance">
           <div class="col wind">
@@ -184,7 +171,7 @@
           </div>
         </div>
       </div>
-      <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project">Jordyn Rothberg</a></footer>
+      <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project" target="_blank">Jordyn Rothberg</a></footer>
     </section>
     </div>
   </div>

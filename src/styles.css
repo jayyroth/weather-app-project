@@ -24,8 +24,7 @@ body {
   }
   
   .current-forecast,
-  .hourly-forecast,
-  .daily-forecast {
+  .five-day-forecast {
     border: 2px solid #5a6275;
     background-color: #dee0e3;
     border-radius: 10%;
@@ -103,8 +102,8 @@ body {
      margin-left: 180px;
   }
 
-  .hourly-button,
-  .daily-button {
+  .hourly-forecast-btn,
+  .daily-forecast-btn {
     border: 1px solid #5a6275;
     border-radius: 5px;
     margin-top: 10px; 
@@ -113,35 +112,17 @@ body {
     font-size: 14px;
   }
   
-  .hourly-button:hover,
-  .daily-button:hover {
+  .hourly-forecast-btn:hover,
+  .daily-forecast-btn:hover {
     background-color: #5a6275;
   }
 
-  .hourly-df {
+  .five-day-forecast {
     font-size: 14px;
     border: 1px solid #5a6275;
   
-    margin-left: 170px;
   }
   
-  .daily-df {
-    font-size: 14px;
-    border: 1px solid #5a6275;
-  }
-  
-  .daily-df {
-    background-color: #5a6275;
-  }
-  
-  #now,
-  #hour-two,
-  #hour-three,
-  #hour-four,
-  #hour-five {
-    padding-left: 14%;
-    text-align: center;
-  }
   
   #day-one,
   #day-two,
