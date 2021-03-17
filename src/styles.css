@@ -100,6 +100,14 @@ footer {
     padding-left: 145px;
   }
 
+  .day-one,
+  .day-one-high,
+  .day-one-low,
+  .icon1,
+  .day-one-stats {
+    padding-left: 40px;
+  }
+
   .statistics {
     border: 2px solid #d1f0ee;
     background-color: #f6fdfc;
