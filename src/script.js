@@ -1,4 +1,5 @@
 function formatDate(date) {
+  let currentDate = new Date();
     let days = [
       "Sunday",
       "Monday",
@@ -22,60 +23,56 @@ function formatDate(date) {
   
     return `${day} ${hours}:${minutes}`;
   }
+ 
   
-  let currentDate = new Date();
-  let dateElement = document.querySelector("#current-date");
-  dateElement.innerHTML = formatDate(currentDate);
-  
-  function getTemperature(response) {
+  function getDefaultTemperature(response) {
     console.log(response.data);
-    document.querySelector("#search-city-result").innerHTML = response.data.name;
-    document.querySelector("#current-temperature").innerHTML =
-      Math.round(response.data.main.temp) + "°";
-    document.querySelector("#feels-like").innerHTML =
-      "Feels like: " + Math.round(response.data.main.feels_like) + "°";
-  }
+    let defaultTemperature = document.querySelector("#current-temperature");
+    let defaultCity = document.querySelector("#search-city-result");
+    let defaultFeelsLike = document.querySelector("#feels-like");
+    let defaultTempMax = document.querySelector("#max-temp");
+    let defaultTempMin = document.querySelector("#min-temp");
+    let defaultDescription = document.querySelector("#weather-description");
+    let defaultWeatherIcon = document.querySelector("#weather-icon");
+    let defaultDateTime = document.querySelector("#current-date");
   
-  function searchCity(event) {
-    event.preventDefault();
+    defaultTemperature.innerHTML = Math.round(response.data.main.temp) + "°";
+    defaultCity.innerHTML = response.data.name;
+    defaultFeelsLike.innerHTML =
+      "Feels like: " + Math.round(response.data.main.feels_like) + "°";
+    defaultTempMax.innerHTML =
+      "H: " + Math.round(response.data.main.temp_max) + "°";
+    defaultTempMin.innerHTML =
+      "L: " + Math.round(response.data.main.temp_min) + "°";
+    defaultDescription.innerHTML = response.data.weather[0].description;
+    defaultWeatherIcon.innerHTML = response.data.weather[0].icon;
+    defaultDateTime.innerHTML = formatDate(response.data.dt * 1000);
+  }
+
+  function search(city) {
     let apiKey = "d77489ebd0ba8b6fa1d62c2519e08052";
     let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-    let city = document.querySelector("#search-city-input").value;
     let units = "metric";
     let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
-  
-    axios.get(apiUrl).then(getTemperature);
+
+axios.get(apiUrl).then(getDefaultTemperature);
   }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    let citySearchResult = document.querySelector("#search-city-result");
+    search(citySearchResult.value);
+  }
+
+  search("Kansas City");
   
   let form = document.querySelector("#city-search-form");
-  form.addEventListener("submit", searchCity);
-  
-  function convertToFahrenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#current-temperature");
-    temperatureElement.innerHTML = 15;
-  }
-  
-  let fahrenheitTemp = document.querySelector("#fahrenheit-temp");
-  fahrenheitTemp.addEventListener("click", convertToFahrenheit);
-  
-  function convertToCelsius(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#current-temperature");
-    temperatureElement.innerHTML = -9;
-  }
-  
-  let celsiusTemp = document.querySelector("#celsius-temp");
-  celsiusTemp.addEventListener("click", convertToCelsius);
+  form.addEventListener("submit", handleSubmit);
 
 
 
-function hourlyForecast() {
 
-}
 
-let hourlyButton = document.querySelector("#hourly-button");
-hourlyButton.addEventListener("click", hourlyForecast);
 
 
 

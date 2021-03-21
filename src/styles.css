@@ -76,14 +76,20 @@ footer {
   }
 
   .city-name {
+    text-align: right;
+    padding-right: 25px;
     padding-top: 15px;
-    font-size: 30px;
+    font-size: 25px;
   }
   
   .weather-conditions {
-    padding-top: 15px;
-    padding-left: 40px;
-    font-size: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+    text-align: right;
+  }
+  
+  .weather-conditions:first-letter {
+    text-transform: capitalize;
   }
   
   .current-forecast-icon {
