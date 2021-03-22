@@ -13,10 +13,23 @@ footer {
     text-align: center;
   }
 
+  .search-engine {
+    border: 2px solid #d1f0ee;
+    border-radius: 10%;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+
+  #magnifying-glass-emoji {
+    border: 2px solid #d1f0ee;
+    border-radius: 10%;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+
   .current-forecast {
       margin-left: 3px;
-      border: 2px solid #5a6275;
-      background-color: #dee0e3;
+      padding: 15px;
+      border: 2px solid #d1f0ee;
+      background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
       border-radius: 10%;
       max-width: 500px;
       font-family: "Sintony", sans-serif;
@@ -31,6 +44,7 @@ footer {
   
   .container {
     border: 2px solid #5a6275;
+    background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
     max-width: 550px;
     margin: 100px auto;
     padding: 20px;
@@ -47,10 +61,10 @@ footer {
 
   #celsius-link,
   #fahrenheit-link {
-    color: black;
+    color: #ae35df;
     text-decoration: none;
-    text-align: right;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
   
 }
 
@@ -99,11 +113,12 @@ footer {
 
   .statistics {
     border: 2px solid #d1f0ee;
-    background-color: #f6fdfc;
-    border-radius: 10%;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 40%;
     max-width: 450px;
     margin-left: 30px;
     margin-bottom: 20px;
+    padding-top: 15px;
   }
 
   .wind-speed-value,
