@@ -21,25 +21,21 @@
     <div class="container">
       <div class="weather-app-full">
       <!--SEARCH CITY FORM-->
+      
+        
       <form id="city-search-form">
         <input type="search" placeholder="Search location here" id="search-city-input" />
-        <input type="submit" value="🔎" id="magnifying-glass-emoji" />
-        <input type="submit" value="📍" id="current-location-btn" />
-
-        <span class="units">°C</span>
-
-            <div class="unit-switch form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="flexSwitchCheckDefault"
-              />
-              <label class="form-check-label" for="flexSwitchCheckDefault"
-                >°F</label
-              >
-            </div>
-      </form>
+     
       
+        <input type="submit" value="🔎" id="magnifying-glass-emoji" />
+       
+        <span class="col temperature-units">
+          <a href="#" id="celsius-link">°C</a>
+          |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+      </form>
+    </div>
       &nbsp;
       <!--CURRENT WEATHER FORECAST-->
       <div class="current-forecast">
@@ -83,73 +79,7 @@
         </div>
       </div>
       &nbsp;
-      <section class="weatherForecastInformation">
-      <div class="five-day-forecast">
-        
-<div class="forecast-toggle">
-          <label class="daily-forecast" for="flexSwitchDefaultForecast">Daily</label>
-            <div class="unit-switch form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="flexSwitchDefaultForecast"
-              />
-              <label class="form-check-label" for="flexSwitchDefaultForecast"
-                >Hourly</label
-              >
-            </div>
-
-      <br />
-      &nbsp;
-        <div class="row days-of-the-week">
-          <div class="col day-one" id="day-one">Sat</div>
-          <div class="col day-two" id="day-two">Sun</div>
-          <div class="col day-three" id="day-three">Mon</div>
-          <div class="col day-four" id="day-four">Tue</div>
-          <div class="col day-five" id="day-five">Wed</div>
-        </div>
-        <br />
-        <div class="row daily-high">
-          <div class="col day-one-high" id="day-one-max">24°</div>
-          <div class="col day-two-high" id="day-two-max">15°</div>
-          <div class="col day-three-high" id="day-three-max">18°</div>
-          <div class="col day-four-high" id="day-four-max">19°</div>
-          <div class="col day-five-high" id="day-five-max">20°</div>
-        </div>
-        <div class="row daily-low">
-          <div class="col day-one-low">
-              <small>9°</small>
-          </div>
-          <div class="col day-two-low" id="day-two-min">
-            <small>12°</small>
-          </div>
-          <div class="col day-three-low" id="day-three-min">
-            <small>7°</small>
-          </div>
-          <div class="col day-four-low" id="day-four-min">
-            <small>10°</small>
-          </div>
-          <div class="col day-five-low" id="day-five-min">
-            <small>10°</small>
-          </div>
-        </div>
-        <br />
-        <div class="row daily-icon">
-          <div class="col icon1" id="day-one-icon">☁️</div>
-          <div class="col icon2" id="day-two-icon">🌨</div>
-          <div class="col icon3" id="day-three-icon">🌨</div>
-          <div class="col icon4" id="day-four-icon">⛅️</div>
-          <div class="col icon5" id="day-five-icon">🌨</div>
-        </div>
-        <div class="row daily-stats">
-          <div class="col day-one-stats" id="day-one-stats">20%</div>
-          <div class="col day-two-stats" id="day-two-stats">50%</div>
-          <div class="col day-three-stats" id="day-three-stats">40%</div>
-          <div class="col day-four-stats" id="day-four-stats">10%</div>
-          <div class="col day-five-stats" id="day-five-stats">30%</div>
-        </div>
-      </div>
-    </section>
+      
       <br />
       <!--WEATHER STATISTICS-->
       <section class="weatherStatistics">
@@ -159,9 +89,9 @@
         <div class="row wind-speed pressure">
           <div class="col wind">
             <ul>
-              <li>
-                 Wind
-                <h6 class="wind-speed" id="wind-speed">NNE 10 mph</h6>
+              <li class="wind-speed-value">
+                 Wind Speed
+                <h6 class="wind-level" id="wind-speed"></h6>
               </li>
             </ul>
            </div>
@@ -169,7 +99,7 @@
            
           <div class="col pressure">
             <ul>
-              <li>
+              <li class="pressure-value">
                 Pressure
                 <h6 class="pressure-level" id="pressure"></h6>
               </li>
@@ -183,41 +113,18 @@
 
           <div class="col humidity">
             <ul>
-              <li>
+              <li class="humidity-value">
                 Humidity
-                <h6 class="humidity-levels" id="humidity">78%</h6>
+                <h6 class="humidity-level" id="humidity"></h6>
               </li>
             </ul>
           </div>
 
           <div class="col visibility">
             <ul>
-              <li>
+              <li class="visibility-value">
                 Visibility
                 <h6 class="visibility-level" id="visibility">10m</h6>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!--SUNRISE & SUNSET-->
-        <div class="row sunrise-sunset">
-
-          <div class="col sunrise">
-            <ul>
-              <li>
-                Sunrise
-                <h6>7:17AM</h6>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col sunset">
-            <ul>
-              <li>
-                Sunset
-                <h6>5:46PM</h6>
               </li>
             </ul>
           </div>

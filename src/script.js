@@ -1,3 +1,4 @@
+//DATE FORMAT
 function formatDate(date) {
   let currentDate = new Date();
     let days = [
@@ -24,7 +25,7 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
   }
  
-  
+  //API INTEGRATION
   function getDefaultTemperature(response) {
     console.log(response.data);
     let defaultTemperature = document.querySelector("#current-temperature");
@@ -35,7 +36,11 @@ function formatDate(date) {
     let defaultDescription = document.querySelector("#weather-description");
     let defaultWeatherIcon = document.querySelector("#weather-icon");
     let defaultDateTime = document.querySelector("#current-date");
-  
+    let defaultWindSpeed = document.querySelector("#wind-speed");
+    let defaultPressure = document.querySelector("#pressure");
+    let defaultHumidity = document.querySelector("#humidity");
+    let defaultVisibility = document.querySelector("#visbility");
+
     defaultTemperature.innerHTML = Math.round(response.data.main.temp) + "°";
     defaultCity.innerHTML = response.data.name;
     defaultFeelsLike.innerHTML =
@@ -47,8 +52,13 @@ function formatDate(date) {
     defaultDescription.innerHTML = response.data.weather[0].description;
     defaultWeatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     defaultDateTime.innerHTML = formatDate(response.data.dt * 1000);
+    defaultWindSpeed.innerHTML = Math.round(response.data.wind.speed) + "mph";
+    defaultPressure.innerHTML = response.data.main.pressure;
+    defaultHumidity.innerHTML = response.data.main.humidity + "%";
+    defaultVisibility.innerHTML = response.data.sys.visibility + "m";
   }
 
+  //SEARCH FORM
   function search(city) {
     let apiKey = "d77489ebd0ba8b6fa1d62c2519e08052";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -67,28 +77,13 @@ axios.get(apiUrl).then(getDefaultTemperature);
   let form = document.querySelector("#city-search-form");
   form.addEventListener("submit", handleSubmit);
 
+//CONVERSIONS
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", imperialUnits);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function imperialUnits(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(fahrenheitTemp) + "°";
+}
