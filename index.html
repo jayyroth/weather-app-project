@@ -47,20 +47,20 @@
           <div class="col local-forecast">
             <ul>
               <li>
-            <h1 class="local-temperature" id="current-temperature"></h1>
-          </li>
-          <li>
-            <h2 class="date-time" id="current-date"></h2>
-          </li>
-          <li>
-            <h2 class="feels-like" id="feels-like"></h2>
-          </li>
-          <li>
-            <h3 class="temp-high" id="max-temp"></h3>
+                <h1 class="local-temperature" id="current-temperature"></h1>
+              </li>
+              <li>
+                <h2 class="date-time" id="current-date"></h2>
+              </li>
+              <li>
+                <h2 class="feels-like" id="feels-like"></h2>
+              </li>
+              <li>
+                <h3 class="temp-high" id="max-temp"></h3>
                   |
-            <h3 class="temp-low" id="min-temp"></h3>
-          </li>
-          </ul>
+                <h3 class="temp-low" id="min-temp"></h3>
+              </li>
+            </ul>
           </div>
           <div class="col city-search">
             <ul>
@@ -71,7 +71,12 @@
             <h2 class="weather-conditions" id="weather-description"></h2>
           </li>
           <li>
-            <h3 class="current-forecast-icon" id="weather-icon"></h3>
+            
+              <img src="Images/cloud (1).png" 
+              alt="cloudy" 
+              class="current-forecast-icon" 
+              id="weather-icon">
+            
           </li>
           </ul>
           </div>
@@ -114,7 +119,7 @@
         <div class="row daily-low">
           <div class="col day-one-low">
               <small>9°</small>
-            </div>
+          </div>
           <div class="col day-two-low" id="day-two-min">
             <small>12°</small>
           </div>
@@ -146,63 +151,81 @@
       </div>
     </section>
       <br />
+      <!--WEATHER STATISTICS-->
       <section class="weatherStatistics">
       <div class="statistics">
+
+        <!--WIND SPEED & PRESSURE-->
         <div class="row wind-speed pressure">
           <div class="col wind">
             <ul>
               <li>
-            Wind
-            <h6 class="wind-speed" id="wind-speed">NNE 10 mph</h6>
-             </li>
-          </div>
-           </ul>
+                 Wind
+                <h6 class="wind-speed" id="wind-speed">NNE 10 mph</h6>
+              </li>
+            </ul>
+           </div>
+          
+           
           <div class="col pressure">
             <ul>
-            <li>
+              <li>
                 Pressure
-              <h6 class="pressure-level" id="pressure"></h6>
-            </li>
+                <h6 class="pressure-level" id="pressure"></h6>
+              </li>
             </ul>
           </div>
+
         </div>
+
+        <!--HUMIDITY & VISIBILITY-->
         <div class="row humidity-visibility">
+
           <div class="col humidity">
-              <ul>
-            <li>
+            <ul>
+              <li>
                 Humidity
                 <h6 class="humidity-levels" id="humidity">78%</h6>
-            </li>
-        </ul>
+              </li>
+            </ul>
           </div>
+
           <div class="col visibility">
-              <ul>
-            <li>
+            <ul>
+              <li>
                 Visibility
                 <h6 class="visibility-level" id="visibility">10m</h6>
-            </li>
-        </ul>
+              </li>
+            </ul>
           </div>
+
         </div>
+
+        <!--SUNRISE & SUNSET-->
         <div class="row sunrise-sunset">
+
           <div class="col sunrise">
-              <ul>
-            <li>
+            <ul>
+              <li>
                 Sunrise
-            <h6>7:17AM</h6>
-            </li>
-        </ul>
+                <h6>7:17AM</h6>
+              </li>
+            </ul>
           </div>
+
           <div class="col sunset">
-              <ul>
-            <li>
+            <ul>
+              <li>
                 Sunset
-            <h6>5:46PM</h6>
-            </li>
-        </ul>
+                <h6>5:46PM</h6>
+              </li>
+            </ul>
           </div>
+
         </div>
+
       </div>
+
       </section>
     </div>
     <footer>Open-source code by <a href="https://github.com/jayyroth/weather-app-project" target="_blank">Jordyn Rothberg</a></footer>

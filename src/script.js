@@ -45,7 +45,7 @@ function formatDate(date) {
     defaultTempMin.innerHTML =
       "L: " + Math.round(response.data.main.temp_min) + "°";
     defaultDescription.innerHTML = response.data.weather[0].description;
-    defaultWeatherIcon.innerHTML = response.data.weather[0].icon;
+    defaultWeatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     defaultDateTime.innerHTML = formatDate(response.data.dt * 1000);
   }
 

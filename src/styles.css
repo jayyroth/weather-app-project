@@ -77,13 +77,13 @@ footer {
 
   .city-name {
     text-align: right;
-    padding-right: 25px;
+    padding-right: 35px;
     padding-top: 15px;
     font-size: 25px;
   }
   
   .weather-conditions {
-    padding-right: 25px;
+    padding-right: 35px;
     font-size: 15px;
     text-align: right;
   }
@@ -93,9 +93,7 @@ footer {
   }
   
   .current-forecast-icon {
-    padding-top: 10px;
-    padding-left: 50px;
-    font-size: 55px;
+    font-size: 20px;
   }
 
   .five-day-forecast {
@@ -122,22 +120,13 @@ footer {
     margin-left: 10px;
     margin-bottom: 20px;
   }
+
   
-  .wind-speed,
-  .humidity-visibility,
-  .precipitation-uvindex,
-  .sunrise-sunset {
-    padding-top: 10px;
-    padding-bottom: 8px;
-    padding-left: 55px;
-  }
   
   .wind,
   .pressure,
   .humidity,
   .visibility,
-  .precipitation,
-  .uv-index,
   .sunrise,
   .sunset {
     font-weight: lighter;
