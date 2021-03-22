@@ -39,7 +39,8 @@ function formatDate(date) {
     let defaultWindSpeed = document.querySelector("#wind-speed");
     let defaultPressure = document.querySelector("#pressure");
     let defaultHumidity = document.querySelector("#humidity");
-    let defaultVisibility = document.querySelector("#visbility");
+
+    celsiusTemp = response.data.main.temp;
 
     defaultTemperature.innerHTML = Math.round(response.data.main.temp) + "°";
     defaultCity.innerHTML = response.data.name;
@@ -52,10 +53,9 @@ function formatDate(date) {
     defaultDescription.innerHTML = response.data.weather[0].description;
     defaultWeatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     defaultDateTime.innerHTML = formatDate(response.data.dt * 1000);
-    defaultWindSpeed.innerHTML = Math.round(response.data.wind.speed) + "mph";
-    defaultPressure.innerHTML = response.data.main.pressure;
+    defaultWindSpeed.innerHTML = Math.round(response.data.wind.speed) + " mph";
+    defaultPressure.innerHTML = response.data.main.pressure + " hPa";
     defaultHumidity.innerHTML = response.data.main.humidity + "%";
-    defaultVisibility.innerHTML = response.data.sys.visibility + "m";
   }
 
   //SEARCH FORM
@@ -72,18 +72,29 @@ axios.get(apiUrl).then(getDefaultTemperature);
     search(citySearchResult.value);
   }
 
-  search("Kansas City");
-  
   let form = document.querySelector("#city-search-form");
   form.addEventListener("submit", handleSubmit);
 
 //CONVERSIONS
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", imperialUnits);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
-function imperialUnits(event) {
+function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = Math.round(fahrenheitTemp) + "°";
 }
+
+let celsiusTemp = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemp) + "°";
+}
+
+search("Kansas City");
